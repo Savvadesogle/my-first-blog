@@ -4,6 +4,16 @@
 	<title>Cписок постов</title>
 </head>
 <body>
+<div>
+    <h1>Постоделло свежее</h1>
+</div>
 
+{% for post in posts %}
+    <div>
+        <p>Дата публикации: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 </body>
 </html>
